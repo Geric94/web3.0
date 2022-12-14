@@ -5,6 +5,7 @@ import { BsInfoCircle } from "react-icons/bs";
 
 import { Loader } from ".";
 import { TransactionContext } from "../context/TransactionContext";
+import { shortenAddress } from "../utils/shortenAddress";
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
@@ -87,18 +88,17 @@ const Welcome = () => {
               </div>
               <div>
                 {<p className="text-white font-light text-sm">
-                  {/* {shortenAddress(currentAccount)} */}
-                  {currentAccount}
+                  {shortenAddress(currentAccount)}
                 </p>}
                 <p className="text-white font-semibold text-lg mt-1">
-                  Ethereum
+                  Polygon
                 </p>
               </div>
             </div>
           </div>
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input placeholder="Address To"    name="addressTo" type="text"   handleChange={handleChange} />
-            <Input placeholder="Amount (ETH)"  name="amount"    type="number" handleChange={handleChange} />
+            <Input placeholder="Amount (MATIC)"  name="amount"    type="number" handleChange={handleChange} />
             <Input placeholder="Keyword (Gif)" name="keyword"   type="text"   handleChange={handleChange} />
             <Input placeholder="Enter Message" name="message"   type="text"   handleChange={handleChange} />
 
